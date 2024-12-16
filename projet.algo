@@ -1,0 +1,25 @@
+ALGORITHM sentence_length
+VAR
+    Je Bosse Dure.:=Length(14)
+BEGIN
+    
+    Initialize sentence_length = 0
+    Initialize word_count = 1
+    Initialize vowel_count = 0
+
+    sentence = "Je Bosse Dure."
+    
+    For each character c in sentence:
+        If c is a letter:
+            Increment sentence_length by 1
+            If c is a vowel (a, e, i, o, u, y):
+                Increment vowel_count by 1
+        If c is a space:
+            Increment word_count by 1
+        If c is a period ('.'):
+            Stop processing
+
+    Display "Length of sentence: ", sentence_length
+    Display "Number of words: ", word_count
+    Display "Number of vowels: ", vowel_count
+END
